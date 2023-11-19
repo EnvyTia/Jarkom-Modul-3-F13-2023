@@ -153,7 +153,7 @@ echo nameserver 192.168.122.1
 
 ## Soal 1
 
-> Setelah mengalahkan Demon King, perjalanan berlanjut. Kali ini, kalian diminta untuk melakukan register domain berupa `riegel.canyon.f04.com` untuk worker Laravel dan `granz.channel.f04.com` untuk worker PHP (0) mengarah pada worker yang memiliki IP `192.223.x.1`.
+> Setelah mengalahkan Demon King, perjalanan berlanjut. Kali ini, kalian diminta untuk melakukan register domain berupa `riegel.canyon.f13.com` untuk worker Laravel dan `granz.channel.f13.com` untuk worker PHP (0) mengarah pada worker yang memiliki IP `10.58.x.1`.
 
 
 1. Konfigurasi pada Heiter (DNS Server)
@@ -184,7 +184,7 @@ mkdir /etc/bind/jarkom
 
 3. File riegel & granz
 ```sh
-##/etc/bind/granz/riegel.canyon.f04.com
+##/etc/bind/granz/riegel.canyon.f13.com
 ;
 ; BIND data file for local loopback interface
 ;
@@ -201,7 +201,7 @@ $TTL    604800
 > /etc/bind/jarkom/riegel.canyon.f13.com
 
 
-##/etc/bind/granz/granz.channel.f04.com
+##/etc/bind/granz/granz.channel.f13.com
 ;
 ; BIND data file for local loopback interface
 ;
@@ -240,7 +240,7 @@ service bind9 restart
 ![ping dari client](Images/jarkom2.png)
 
 ## Soal 2
- > Client yang melalui Switch3 mendapatkan range IP dari 192.223.3.16 - 192.223.3.32 dan 192.223.3.64 - 192.223.3.80
+ > Client yang melalui Switch3 mendapatkan range IP dari 10.58.3.16 - 10.58.3.32 dan 10.58.3.64 - 10.58.3.80
 
 
 
@@ -268,7 +268,7 @@ service isc-dhcp-server status
 
 ## Soal 3
 
-> Client yang melalui Switch4 mendapatkan range IP dari 192.223.4.12 - 192.223.4.20 dan 192.223.4.160 - 192.223.4.168
+> Client yang melalui Switch4 mendapatkan range IP dari 10.58.4.12 - 10.58.4.20 dan 10.58.4.160 - 10.58.4.168
 
 
 1. add ip range configuration in `/etc/dhcp/dhcpd.conf` on `Himmel`
@@ -399,7 +399,7 @@ Pada tiap PHP worker:
     ```sh
    
     ```
-* `/etc/nginx/sites-available/granz.channel.f04`:
+* `/etc/nginx/sites-available/granz.channel.f13`:
     ```sh
 
     ```
@@ -466,7 +466,7 @@ Pada salah satu client:
     
 ## Soal 10
 
-> Selanjutnya coba tambahkan konfigurasi autentikasi di LB dengan dengan kombinasi username: `netics` dan password: `ajkf04`, dengan yyy merupakan kode kelompok. Terakhir simpan file `htpasswd` nya di `/etc/nginx/rahasisakita/` .
+> Selanjutnya coba tambahkan konfigurasi autentikasi di LB dengan dengan kombinasi username: `netics` dan password: `ajkf13`, dengan yyy merupakan kode kelompok. Terakhir simpan file `htpasswd` nya di `/etc/nginx/rahasisakita/` .
  
 
 Pada Eisen:
@@ -503,7 +503,7 @@ Pada Eisen:
 
 ## Soal 12
 
-> Selanjutnya LB ini hanya boleh diakses oleh client dengan IP `192.223.3.69`, `192.223.3.70`, `192.223.4.167`, dan `192.223.4.168`.
+> Selanjutnya LB ini hanya boleh diakses oleh client dengan IP `10.58.3.69`, `10.58.3.70`, `10.58.4.167`, dan `10.58.4.168`.
  
 
 Pada Eisen:
@@ -522,13 +522,13 @@ Pada Eisen:
 
 ## Soal 13 & 14
 
-> Karena para petualang kehabisan uang, mereka kembali bekerja untuk mengatur `riegel.canyon.f04.com`.
+> Karena para petualang kehabisan uang, mereka kembali bekerja untuk mengatur `riegel.canyon.f13.com`.
 > 1. Semua data yang diperlukan, diatur pada Denken dan harus dapat diakses oleh `Lawine`, `Linie`, dan `Lugner`. (13)
 > 2. `Lawine`, `Linie`, dan `Lugner` memiliki Riegel Canyon sesuai dengan quest guide berikut. Jangan lupa melakukan instalasi `PHP8.0` dan `Composer` (14)
 
 Pada `Danken`
 
-1. tambakan `nameserver 192.223.1.3 # IP Heiter` pada `/etc/resolv.conf`
+1. tambakan `nameserver 10.58.1.3 # IP Heiter` pada `/etc/resolv.conf`
 
 
 * `queries.sql`:
@@ -560,7 +560,7 @@ Untuk setup deploy Laravel menggunakan Nginx:
 1. install `nginx`
 
 
-* `/etc/nginx/sites-available/riegel.canyon.f04`:
+* `/etc/nginx/sites-available/riegel.canyon.f13`:
     ```sh
   
     
