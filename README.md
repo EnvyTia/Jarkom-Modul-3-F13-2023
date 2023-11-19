@@ -254,7 +254,7 @@ echo 'subnet 10.58.1.0 netmask 255.255.255.0 {
 subnet 10.58.2.0 netmask 255.255.255.0 {
 }
 
-subnet 192.212.3.0 netmask 255.255.255.0 {
+subnet 10.58.3.0 netmask 255.255.255.0 {
         range 10.58.3.16 10.58.3.32;
         range 10.58.3.64 10.58.3.80;
         option routers 10.58.3.0;
@@ -281,7 +281,7 @@ service isc-dhcp-server status
 subnet 10.58.2.0 netmask 255.255.255.0 {
 }
 
-subnet 192.212.3.0 netmask 255.255.255.0 {
+subnet 10.58.3.0 netmask 255.255.255.0 {
         range 10.58.3.16 10.58.3.32;
         range 10.58.3.64 10.58.3.80;
         option routers 10.58.3.0;
@@ -309,7 +309,7 @@ echo 'subnet 10.58.1.0 netmask 255.255.255.0 {
 subnet 10.58.2.0 netmask 255.255.255.0 {
 }
 
-subnet 192.212.3.0 netmask 255.255.255.0 {
+subnet 10.58.3.0 netmask 255.255.255.0 {
         range 10.58.3.16 10.58.3.32;
         range 10.58.3.64 10.58.3.80;
         option routers 10.58.3.0;
@@ -341,7 +341,7 @@ echo 'subnet 10.58.1.0 netmask 255.255.255.0 {
 subnet 10.58.2.0 netmask 255.255.255.0 {
 }
 
-subnet 192.212.3.0 netmask 255.255.255.0 {
+subnet 10.58.3.0 netmask 255.255.255.0 {
         range 10.58.3.16 10.58.3.32;
         range 10.58.3.64 10.58.3.80;
         option routers 10.58.3.0;
